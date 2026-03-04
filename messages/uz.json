@@ -6,7 +6,15 @@
     "contact":  "Aloqa"
   },
   "footer": {
-    "rights": "© 2025 FAZO. Barcha huquqlar himoyalangan."
+    "rights": "© 2025 FAZO. Barcha huquqlar himoyalangan.",
+    "tagline": "Raqamli g'oyalar galaktikasi",
+    "phone1": "+998 90 123 45 67",
+    "phone2": "+998 91 234 56 78",
+    "ctaText": "Noyob loyiha qurishga tayyormisiz?",
+    "ctaButton": "Loyiha boshlash",
+    "telegram": "https://t.me/fazo",
+    "instagram": "https://instagram.com/fazo",
+    "youtube": "https://youtube.com/fazo"
   },
   "hero": {
     "headline":    "Biz raqamli galaktikalarni quramiz.",
@@ -22,6 +30,11 @@
   },
   "services": {
     "title": "Biz nima yaratamiz",
+    "typewriterPhrases": [
+      "Biz Web tizimlar quramiz",
+      "Biz Mobil ilovalar yaratamiz",
+      "Biz Raqamli ekotizimlar quramiz"
+    ],
     "web": {
       "title":   "Web Dasturlash",
       "intro":   "Zamonaviy web platformalar va admin tizimlar. Kengaytiriladigan arxitektura asosida ishlab chiqilgan.",
@@ -134,6 +147,11 @@
     "success":   "Xabar yuborildi! Tez orada bog'lanamiz.",
     "error":     "Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.",
     "trustLine": "Shaffof jarayon • Aniq bosqichlar • Uzoq muddatli qo'llab-quvvatlash"
+  },
+  "modal": {
+    "successTitle": "Muvaffaqiyatli",
+    "successMessage": "Xabaringiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog'lanamiz.",
+    "close": "Yopish"
   },
   "cta": {
     "headline": "G'oyangiz shablondan ko'ra ko'proqqa loyiq.",

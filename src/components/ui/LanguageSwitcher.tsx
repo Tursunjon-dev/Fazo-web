@@ -41,22 +41,23 @@ export function LanguageSwitcher() {
             className="absolute right-0 top-11 z-50 min-w-[64px] overflow-hidden rounded-xl border border-[var(--border-subtle)] py-1 shadow-lg"
             style={{ background: "var(--bg-secondary)", backdropFilter: "blur(16px)" }}
           >
-            {LOCALES.map((loc) => (
-              <li
-                key={loc.code}
-                role="option"
-                aria-selected={locale === loc.code}
-                onClick={() => {
-                  router.replace(pathname, { locale: loc.code });
-                  setOpen(false);
-                }}
-                className={`cursor-pointer px-4 py-2 text-xs font-medium transition-colors hover:text-[var(--accent-cyan)] ${
-                  locale === loc.code ? "text-[var(--accent-cyan)]" : "text-[var(--text-secondary)]"
-                }`}
-              >
-                {loc.label}
-              </li>
-            ))}
+                    {LOCALES.map((loc) => (
+                      <li key={loc.code} role="option" aria-selected={locale === loc.code}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            router.replace(pathname, { locale: loc.code });
+                            setOpen(false);
+                          }}
+                          className={`w-full cursor-pointer px-4 py-2 text-left text-xs font-medium transition-colors hover:text-[var(--accent-cyan)] ${
+                            locale === loc.code ? "text-[var(--accent-cyan)]" : "text-[var(--text-secondary)]"
+                          }`}
+                          aria-label={`Switch language to ${loc.label}`}
+                        >
+                          {loc.label}
+                        </button>
+                      </li>
+                    ))}
           </motion.ul>
         )}
       </AnimatePresence>

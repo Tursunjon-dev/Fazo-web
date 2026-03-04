@@ -13,7 +13,13 @@ Set these in Netlify **before** deploying (for the contact form Telegram integra
 | Variable | Description |
 |----------|-------------|
 | `TELEGRAM_BOT_TOKEN` | Your Telegram bot token |
-| `TELEGRAM_CHAT_ID` | Chat ID where messages are sent |
+| `TELEGRAM_ADMIN_IDS` | Comma-separated Telegram admin chat IDs |
+
+Example:
+
+```env
+TELEGRAM_ADMIN_IDS=123456789,987654321
+```
 
 **Where to set:** Netlify Dashboard → Site → Site configuration → Environment variables
 
@@ -87,5 +93,5 @@ Future pushes to your main branch will trigger automatic deploys.
 |-------|----------|
 | **"Failed publishing static content"** | In Netlify UI: Site configuration → Build & deploy → Build settings → **clear** the "Publish directory" field (leave empty). The `netlify.toml` uses `.next` and must not be an absolute/Windows path. |
 | Build fails | Check `npm run build` locally. Ensure Node 18+ (`npm install`). |
-| Contact form not sending | Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in Netlify env vars. |
+| Contact form not sending | Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_ADMIN_IDS` in Netlify env vars. Make sure each admin has started a chat with the bot and IDs are comma-separated. |
 | 404 on locale routes | Middleware should handle `/uz`, `/en`, `/ru`. Verify `netlify.toml` and middleware. |

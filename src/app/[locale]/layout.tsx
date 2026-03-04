@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { CosmicFooter } from "@/components/layout/CosmicFooter";
 import { ScrollAmbientProvider } from "@/components/providers/ScrollAmbientProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
 import { ContactModalProvider } from "@/contexts/ContactModalContext";
 import { ContactModalHost } from "@/components/providers/ContactModalHost";
 
@@ -29,6 +30,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <ContactModalProvider>
         <CustomCursor />
         <ScrollAmbientProvider />
+        <ScrollIndicator />
         <ContactModalHost />
         <div className="flex min-h-screen flex-col">
           <Header />

@@ -1,0 +1,21 @@
+{
+  "name": "FAZO",
+  "short_name": "FAZO",
+  "description": "FAZO — Raqamli g'oyalar galaktikasi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0324",
+  "theme_color": "#0B0324",
+  "icons": [
+    {
+      "src": "/fazo-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/fazo-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

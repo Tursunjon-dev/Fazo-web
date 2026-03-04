@@ -9,7 +9,28 @@ const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" });
 export const metadata: Metadata = {
   title: "FAZO — Raqamli g'oyalar galaktikasi",
   description: "We engineer digital galaxies. Web, Backend, Android, iOS, SMM.",
-  icons: { icon: "/fazo-logo.png" },
+  metadataBase: new URL("https://fazo.uz"),
+  openGraph: {
+    title: "FAZO — Raqamli g'oyalar galaktikasi",
+    description: "We engineer digital galaxies. Web, Backend, Android, iOS, SMM.",
+    url: "https://fazo.uz",
+    siteName: "FAZO",
+    locale: "uz_UZ",
+    type: "website",
+    images: [{ url: "/fazo-logo.png", width: 512, height: 512, alt: "FAZO logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAZO — Raqamli g'oyalar galaktikasi",
+    description: "We engineer digital galaxies. Web, Backend, Android, iOS, SMM.",
+    images: ["/fazo-logo.png"],
+  },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: "/fazo-logo.png",
+    shortcut: "/fazo-logo.png",
+    apple: "/fazo-logo.png",
+  },
 };
 
 export default function RootLayout({

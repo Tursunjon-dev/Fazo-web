@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Globe, Server, Smartphone, Apple, Share2 } from "lucide-react";
 import { usePointerCapable } from "@/hooks/usePointerCapable";
+import { TypewriterHeadline } from "@/components/ui/TypewriterHeadline";
 
 const EASE = [0.4, 0, 0.2, 1] as const;
 
@@ -101,6 +102,7 @@ function ServicePanel({ Icon, num, title, intro, bullets, delay, pointerFine }: 
 export function ServicesSection() {
   const t = useTranslations("services");
   const pointerFine = usePointerCapable();
+  const phrases = (t.raw("typewriterPhrases") as string[]) ?? [];
 
   return (
     <section id="services" data-ambient="services" className="section-ambient px-4 py-28 md:px-8 md:py-36">
@@ -114,6 +116,17 @@ export function ServicesSection() {
         >
           {t("title")}
         </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.7, delay: 0.08, ease: EASE }}
+        >
+          <TypewriterHeadline
+            phrases={phrases}
+            className="mt-4 text-center text-sm tracking-wide text-[var(--text-secondary)] md:text-base"
+          />
+        </motion.div>
 
         <div className="mt-16 flex flex-col gap-5">
           {/* Row 1: 55/45 asymmetric */}

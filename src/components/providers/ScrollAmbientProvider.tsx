@@ -18,8 +18,9 @@ export function ScrollAmbientProvider() {
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isCoarse = window.matchMedia("(pointer: coarse)").matches;
-    const scale = isCoarse ? 0.5 : 1;
-    const disableParallax = prefersReduced || isCoarse;
+    const isMobile = window.matchMedia("(max-width: 900px)").matches;
+    const scale = isCoarse || isMobile ? 0.5 : 1;
+    const disableParallax = prefersReduced || isCoarse || isMobile;
 
     let curI = 0.04, curY = 30, tgtI = 0.04, tgtY = 30;
     let raf = 0, live = true;

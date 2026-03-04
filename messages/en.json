@@ -6,7 +6,15 @@
     "contact":  "Contact"
   },
   "footer": {
-    "rights": "© 2025 FAZO. All rights reserved."
+    "rights": "© 2025 FAZO. All rights reserved.",
+    "tagline": "Digital Ideas Galaxy",
+    "phone1": "+998 90 123 45 67",
+    "phone2": "+998 91 234 56 78",
+    "ctaText": "Ready to build something remarkable?",
+    "ctaButton": "Start a Project",
+    "telegram": "https://t.me/fazo",
+    "instagram": "https://instagram.com/fazo",
+    "youtube": "https://youtube.com/fazo"
   },
   "hero": {
     "headline":      "We engineer digital galaxies.",
@@ -22,6 +30,11 @@
   },
   "services": {
     "title": "What We Build",
+    "typewriterPhrases": [
+      "We build Web Systems",
+      "We build Mobile Apps",
+      "We build Digital Ecosystems"
+    ],
     "web": {
       "title":   "Web Development",
       "intro":   "Modern web platforms and administrative systems built with scalable architecture.",
@@ -134,6 +147,11 @@
     "success":   "Message sent! We'll reach out shortly.",
     "error":     "Something went wrong. Please try again.",
     "trustLine": "Transparent process • Structured milestones • Long-term support"
+  },
+  "modal": {
+    "successTitle": "Success",
+    "successMessage": "Message sent successfully. We will contact you shortly.",
+    "close": "Close"
   },
   "cta": {
     "headline": "Your idea deserves more than a template.",

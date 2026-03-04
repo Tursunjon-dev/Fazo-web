@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { NotebookText } from "@/components/ui/NotebookText";
 
 const EASE = [0.4, 0, 0.2, 1] as const;
 
@@ -44,16 +45,12 @@ export function ManifestoSection() {
           {/* Right: Paragraphs */}
           <div className="flex flex-col justify-center gap-6">
             {(["paragraph1", "paragraph2", "paragraph3"] as const).map((key, i) => (
-              <motion.p
+              <NotebookText
                 key={key}
+                text={t(key)}
                 className="text-base leading-relaxed text-[var(--text-secondary)] md:text-lg"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.7, delay: i * 0.12, ease: EASE }}
-              >
-                {t(key)}
-              </motion.p>
+                delayMs={i * 150}
+              />
             ))}
           </div>
         </div>

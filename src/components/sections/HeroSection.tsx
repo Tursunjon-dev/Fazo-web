@@ -12,21 +12,23 @@ const HeroScene = dynamic(
 const EASE = [0.4, 0, 0.2, 1] as const;
 
 function AnimatedHeadline({ text }: { text: string }) {
+  const words = text.split(" ");
   return (
     <motion.h1
       className="font-orbitron max-w-4xl text-4xl font-bold tracking-wide text-[var(--text-primary)] md:text-5xl lg:text-6xl"
       aria-label={text}
+      style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
     >
-      {text.split("").map((char, i) => (
+      {words.map((word, i) => (
         <motion.span
           key={i}
           className="inline-block"
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 + i * 0.022, ease: EASE }}
-          style={{ whiteSpace: char === " " ? "pre" : undefined }}
+          initial={{ opacity: 0, y: 26, filter: "blur(10px)", transform: "translateZ(-200px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)", transform: "translateZ(0px)" }}
+          transition={{ duration: 0.8, delay: 0.75 + i * 0.15, ease: EASE }}
+          style={{ marginRight: i === words.length - 1 ? 0 : "0.35ch" }}
         >
-          {char}
+          {word}
         </motion.span>
       ))}
     </motion.h1>
