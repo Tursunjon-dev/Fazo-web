@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E6F7FF"/>
+      <stop offset="100%" stop-color="#9FE8FF"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="#0050FF"/>
+    </linearGradient>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Orbit ellipse (tilted -15deg) -->
+  <g filter="url(#glow)" data-logo-glow="orbit">
+    <ellipse cx="300" cy="200" rx="180" ry="56" stroke="url(#orbitGrad)" stroke-width="2.5" fill="none"
+             transform="rotate(-15 300 200)"/>
+    <ellipse cx="300" cy="200" rx="180" ry="56" stroke="url(#orbitGrad)" stroke-width="0.8" opacity="0.4" fill="none"
+             transform="rotate(-15 300 200)" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- FAZO text -->
+  <text x="300" y="222" text-anchor="middle" font-family="Orbitron, sans-serif"
+        font-size="72" font-weight="800" letter-spacing="0.08em"
+        fill="url(#textGrad)" filter="url(#glow)" data-logo-glow="text">FAZO</text>
+
+  <!-- Star accents -->
+  <g data-logo-glow="stars" fill="#00C2FF" filter="url(#glow)">
+    <circle cx="116" cy="172" r="4" opacity="0.9"/>
+    <circle cx="490" cy="235" r="3" opacity="0.8"/>
+    <circle cx="175" cy="310" r="2.5" opacity="0.7"/>
+    <circle cx="438" cy="115" r="2" opacity="0.75"/>
+  </g>
+</svg>
